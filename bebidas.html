@@ -23336,8 +23336,102 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
         color: #00703c;
     }
 </style>
+<style>
+  .carousel-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 20px;
+      background-color: #f5f5f5;
+      gap: 15px;
+  }
+  .carousel-item {
+      min-width: 180px;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      scroll-snap-align: start;
+      transition: transform 0.3s ease-in-out;
+  }
+  .carousel-item:hover {
+      transform: translateY(-5px);
+  }
+  .icon-container {
+      width: 60px;
+      height: 60px;
+      background-color: #709985;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px;
+  }
+  .icon-container i {
+      font-size: 28px;
+      color: white;
+  }
+  .item-title {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+  }
+  .item-details {
+      font-size: 0.9rem;
+      color: gray;
+      margin-bottom: 5px;
+      font-weight: bold;
+  }
+  .item-price {
+      font-size: 1rem;
+      color: #d32f2f;
+      font-weight: bold;
+  }
+</style>
 
-  </head>
+<style>
+ .pricing-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 40px;
+      flex-wrap: wrap;
+  }
+  .pricing-box {
+      width: 220px;
+      background: white;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+  }
+  .pricing-box img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+  }
+  .item-title {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+  }
+  .item-details {
+      font-size: 0.9rem;
+      color: gray;
+      margin-bottom: 5px;
+  }
+  .item-price {
+      font-size: 1rem;
+      color: #d32f2f;
+      font-weight: bold;
+  }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
   <body >
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJ9K2B7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -23378,48 +23472,234 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
           </video>
         </section>
         <section>
-          <div class="menu-container">
-            <h2 class="menu-title">Menú de Helados y Paletas</h2>
-            <div class="menu-grid">
-                <div class="menu-category">
-                    <h3>Helados</h3>
-                    <div class="menu-item">
-                        <p>Clásico sencillo (182ml/110grs)</p>
-                        <span class="menu-price">$56</span>
-                    </div>
-                    <div class="menu-item">
-                        <p>Especial sencillo (182ml/110grs)</p>
-                        <span class="menu-price">$78</span>
-                    </div>
-                    <div class="menu-item">
-                        <p>Doble Clásico (364ml/220grs)</p>
-                        <span class="menu-price">$88</span>
-                    </div>
-                    <div class="menu-item">
-                        <p>Doble Especial (364ml/220grs)</p>
-                        <span class="menu-price">$125</span>
-                    </div>
-                    
-                </div>
-                <div class="menu-category">
-                    <h3>Paletas</h3>
-                    <div class="menu-item">
-                        <p>Paleta de Agua (Limón, Tamachile, Chilimango)</p>
-                        <span class="menu-price">$32</span>
-                    </div>
-                    <div class="menu-item">
-                        <p>Paleta de Crema de leche (Menta, Fresa, Nuez, Chocolate)</p>
-                        <span class="menu-price">$40</span>
-                    </div>
-                    <div class="menu-item">
-                        <p>Paleta Especial (Mazapán, Chocolate puro, sin azúcar)</p>
-                        <span class="menu-price">$45</span>
-                    </div>
-                </div>
+          <img src="/assets/img/menu/bebidas.png" alt="Helado Nova" style="width: 15%; display: block; margin-left: auto; margin-right: auto;">
+          <div class="carousel-container">
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Espresso sencillo</div>
+                <div class="item-price">$39</div>
             </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Espresso doble</div>
+                <div class="item-price">$45</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Espresso cortado</div>
+                <div class="item-price">$40</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Americano</div>
+                <div class="item-details">(12oz)</div>
+                <div class="item-price">$70</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Americano</div>
+                <div class="item-details">(16oz)</div>
+                <div class="item-price">$47</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Latte</div>
+                <div class="item-details">(12oz)</div>
+                <div class="item-price">$55</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Latte</div>
+                <div class="item-details">(16oz)</div>
+                <div class="item-price">$62</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Capuccino</div>
+                <div class="item-details">(12oz)</div>
+                <div class="item-price">$55</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Capuccino</div>
+                <div class="item-details">(16oz)</div>
+                <div class="item-price">$62</div>
+            </div>
+          </div>
+          <div class="carousel-container">
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Affogato Clásico</div>
+                <div class="item-price">$75</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Affogato Especial</div>
+                <div class="item-price">$95</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Capuccino con helado Clásico</div>
+                <div class="item-price">$80</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Capuccino con helado Especial</div>
+                <div class="item-price">$95</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Café Moka</div>
+                <div class="item-details">(12oz)</div>
+                <div class="item-price">$47</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Chocolate Mexicano</div>
+                <div class="item-details">(12oz)</div>
+                <div class="item-price">$52</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Chai Latte</div>
+                <div class="item-details">(12oz)</div>
+                <div class="item-price">$54</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Chai Latte</div>
+                <div class="item-details">(16oz)</div>
+                <div class="item-price">$61</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Té</div>
+                <div class="item-details">12oz (Earl grey / Verde / Menta Marroquí)</div>
+                <div class="item-price">$39</div>
+            </div>
+            <div class="carousel-item">
+              <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+              <div class="item-title">Té</div>
+              <div class="item-details">16oz (Earl grey / Verde / Menta Marroquí)</div>
+              <div class="item-price">$47</div>
+          </div>
+            <div class="carousel-item">
+              <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+              <div class="item-title">Tisana 12oz</div>
+              <div class="item-details">(Manzana-canela / Moras /
+                Fantasía tropical / Guayaba)</div>
+              <div class="item-price">$39</div>
+          </div>
+          <div class="carousel-item">
+            <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+            <div class="item-title">Tisana 16oz</div>
+            <div class="item-details">(Manzana-canela / Moras /
+              Fantasía tropical / Guayaba)</div>
+            <div class="item-price">$47</div>
         </div>
+          </div>
+          <div class="carousel-container" style="display: flex; justify-content: space-between; width: 100%;">
+            <div class="carousel-item" style="flex: 1; margin: 10px;">
+                <div class="icon-container"><i class="fas fa-carton" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Extra de leche</div>
+                <div class="item-price">$6</div>
+            </div>
+            <div class="carousel-item" style="flex: 1; margin: 10px;">
+                <div class="icon-container"><i class="fas fa-plus" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Extra de Café</div>
+                <div class="item-price">$9</div>
+            </div>
+            <div class="carousel-item" style="flex: 1; margin: 10px;">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Cambio a leche desctosada</div>
+                <div class="item-price">$3</div>
+            </div>
+            <div class="carousel-item" style="flex: 1; margin: 10px;">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Cambio a leche desctosada</div>
+                <div class="item-price">$5</div>
+            </div>
+            <div class="carousel-item" style="flex: 1; margin: 10px;">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Café En Grano</div>
+                <div class="item-details">(1kg)</div>
+                <div class="item-price">$430</div>
+            </div>
+            <div class="carousel-item" style="flex: 1; margin: 10px;">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Café Molido</div>
+                <div class="item-details">(500gr)</div>
+                <div class="item-price">$225</div>
+            </div>
+          </div>
         </section>
-
+        <section>
+          <img src="/assets/img/menu/bebidasfrias.png" alt="Helado Nova" style="width: 15%; display: block; margin-left: auto; margin-right: auto;">
+          <div class="carousel-container">
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Limonada Clásica</div>
+                <div class="item-price">$75</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Limonada Especial</div>
+                <div class="item-price">$90</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Agua 600ml</div>
+                <div class="item-price">$25</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Refresco</div>
+                <div class="item-price">$25</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Chai Latte frío 16oz</div>
+                <div class="item-details">(16oz)</div>
+                <div class="item-price">$61</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Americano frío</div>
+                <div class="item-details">(12oz)</div>
+                <div class="item-price">$55</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Americano frío</div>
+                <div class="item-details">(16oz)</div>
+                <div class="item-price">$47</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Latte frío</div>
+                <div class="item-details">(12oz)</div>
+                <div class="item-price">$55</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Latte frío</div>
+                <div class="item-details">(16oz)</div>
+                <div class="item-price">$62</div>
+            </div>
+            <div class="carousel-item">
+              <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+              <div class="item-title">Te frío</div>
+              <div class="item-details">(16oz)</div>
+              <div class="item-price">$47</div>
+          </div>
+          <div class="carousel-item">
+            <div class="icon-container"><i class="fas fa-coffee" style="color: #8ecbc6;"></i></div>
+            <div class="item-title">Tisana Fría</div>
+            <div class="item-details">(16oz)</div>
+            <div class="item-price">$47</div>
+        </div>
+          </div>
+        </section>
       <section class="homeMember" style="background-image:url(assets/img/Home/IMG_4735-_1_.webp);"><div class="wrapper"><h2 lang="en" data-aos="fade-up">
         Encuentra
       </h2> <h2 lang="en" data-aos="fade-up">

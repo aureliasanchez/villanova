@@ -23336,7 +23336,100 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
         color: #00703c;
     }
 </style>
+<style>
+  .carousel-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 20px;
+      background-color: #f5f5f5;
+      gap: 15px;
+  }
+  .carousel-item {
+      min-width: 180px;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      scroll-snap-align: start;
+      transition: transform 0.3s ease-in-out;
+  }
+  .carousel-item:hover {
+      transform: translateY(-5px);
+  }
+  .icon-container {
+      width: 60px;
+      height: 60px;
+      background-color: #709985;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px;
+  }
+  .icon-container i {
+      font-size: 28px;
+      color: white;
+  }
+  .item-title {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+  }
+  .item-details {
+      font-size: 0.9rem;
+      color: gray;
+      margin-bottom: 5px;
+      font-weight: bold;
+  }
+  .item-price {
+      font-size: 1rem;
+      color: #d32f2f;
+      font-weight: bold;
+  }
+</style>
 
+<style>
+ .pricing-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 40px;
+      flex-wrap: wrap;
+  }
+  .pricing-box {
+      width: 220px;
+      background: white;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+  }
+  .pricing-box img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+  }
+  .item-title {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+  }
+  .item-details {
+      font-size: 0.9rem;
+      color: gray;
+      margin-bottom: 5px;
+  }
+  .item-price {
+      font-size: 1rem;
+      color: #d32f2f;
+      font-weight: bold;
+  }
+</style>
   </head>
   <body >
     <!-- Google Tag Manager (noscript) -->
@@ -23378,45 +23471,97 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
           </video>
         </section>
         <section>
-          <div class="menu-container">
-            <h2 class="menu-title">Menú de Helados y Paletas</h2>
-            <div class="menu-grid">
-                <div class="menu-category">
-                    <h3>Helados</h3>
-                    <div class="menu-item">
-                        <p>Clásico sencillo (182ml/110grs)</p>
-                        <span class="menu-price">$56</span>
-                    </div>
-                    <div class="menu-item">
-                        <p>Especial sencillo (182ml/110grs)</p>
-                        <span class="menu-price">$78</span>
-                    </div>
-                    <div class="menu-item">
-                        <p>Doble Clásico (364ml/220grs)</p>
-                        <span class="menu-price">$88</span>
-                    </div>
-                    <div class="menu-item">
-                        <p>Doble Especial (364ml/220grs)</p>
-                        <span class="menu-price">$125</span>
-                    </div>
-                </div>
-                <div class="menu-category">
-                    <h3>Paletas</h3>
-                    <div class="menu-item">
-                        <p>Paleta de Agua (Limón, Tamachile, Chilimango)</p>
-                        <span class="menu-price">$32</span>
-                    </div>
-                    <div class="menu-item">
-                        <p>Paleta de Crema de leche (Menta, Fresa, Nuez, Chocolate)</p>
-                        <span class="menu-price">$40</span>
-                    </div>
-                    <div class="menu-item">
-                        <p>Paleta Especial (Mazapán, Chocolate puro, sin azúcar)</p>
-                        <span class="menu-price">$45</span>
-                    </div>
-                </div>
+          <img src="/assets/img/menu/taza.png" alt="Helado Nova" style="width: 15%; display: block; margin-left: auto; margin-right: auto;">
+          <div class="carousel-container">
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-ice-cream" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Pastel Clásico </div>
+                <div class="item-details">(Chocolate / Zanahoria)</div>
+                <div class="item-price">$555</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-ice-cream" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Pastel Especial</div>
+                <div class="item-details">l (Red velvet) </div>
+                <div class="item-price">$585</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-ice-cream" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Tarta</div>
+                <div class="item-details">(Tiramisu/ Manzana)</div>
+                <div class="item-price">$585</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-ice-cream" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Rebanada de pastel y tarta</div>
+                <div class="item-price">$70</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-ice-cream" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Brownie</div>
+                <div class="item-price">$42</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-ice-cream" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Caja de galletas</div>
+                <div class="item-price">$42</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-ice-cream" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Tartaleta de elote</div>
+                <div class="item-price">$39</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-ice-cream" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Biscotti</div>
+                <div class="item-details">(Chocolate / Arándano)</div>
+                <div class="item-price">$25</div>
+            </div>
+            <div class="carousel-item">
+                <div class="icon-container"><i class="fas fa-ice-cream" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Abanico</div>
+                <div class="item-price">$55</div>
             </div>
         </div>
+        </section>
+        <section>
+          <div class="carousel-container">
+            <div class="carousel-item col-md-2">
+                <div class="icon-container"><i class="fas fa-ice-cream" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Yogurt natural</div>
+                <div class="item-details">(250gr)</div>
+                <div class="item-price">$19</div>
+            </div>
+            <div class="carousel-item col-md-2">
+                <div class="icon-container"><i class="fas fa-ice-cream" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Yogurt frutal</div>
+                <div class="item-details">(250gr)</div>
+                <div class="item-price">$21</div>
+            </div>
+            <div class="carousel-item col-md-2">
+                <div class="icon-container"><i class="fas fa-ice-cream" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Yogurt natural</div>
+                <div class="item-details">(1kg)</div>
+                <div class="item-price">$50</div>
+            </div>
+            <div class="carousel-item col-md-2">
+                <div class="icon-container"><i class="fas fa-ice-cream" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Crema para batir</div>
+                <div class="item-price">$111</div>
+            </div>
+            <div class="carousel-item col-md-2">
+                <div class="icon-container"><i class="fas fa-ice-cream" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Leche entera</div>
+                <div class="item-details">(1.86ml)</div>
+                <div class="item-price">$54</div>
+            </div>
+            <div class="carousel-item col-md-2">
+                <div class="icon-container"><i class="fas fa-ice-cream" style="color: #8ecbc6;"></i></div>
+                <div class="item-title">Leche deslactosada</div>
+                <div class="item-details">(1.86ml)</div>
+                <div class="item-price">$56</div>
+            </div>
+          </div>
         </section>
 
       <section class="homeMember" style="background-image:url(assets/img/Home/IMG_4735-_1_.webp);"><div class="wrapper"><h2 lang="en" data-aos="fade-up">
